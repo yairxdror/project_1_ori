@@ -17,7 +17,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     width: 450px;
-    height: 220px;
+    height: 230px;
     border-radius: 5%;
     margin: auto;
     display: flex;
@@ -57,11 +57,13 @@ body {
 .card {
     background-color: rgb(245, 245, 192);
     margin: 10px;
+    height: 220px;
     margin-top: 20px;
     animation: fadeIn 0.3s ease-in;
 
 }
 .cardTitle {
+    font-weight: bold;
     text-decoration: underline;
   }
   
