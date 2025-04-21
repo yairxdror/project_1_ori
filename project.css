@@ -1,0 +1,107 @@
+body {
+    background-image: url('https://corkhouse.co.il/wp-content/uploads/2023/05/10786-%D7%9C%D7%95%D7%97-%D7%A9%D7%A2%D7%9D-3-%D7%9E%D7%9E-%D7%93%D7%92%D7%9D-WHITE-scaled.jpg');
+
+    text-align: center;
+
+}
+
+#title {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#note {
+    background-image: url('https://i.postimg.cc/xTKsY5fG/newpage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 450px;
+    height: 220px;
+    border-radius: 5%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.input-group .form-control {
+    flex: 1;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+#notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    direction: rtl;
+}
+
+.card {
+    background-color: rgb(245, 245, 192);
+    margin: 10px;
+    margin-top: 20px;
+    animation: fadeIn 0.3s ease-in;
+
+}
+
+.card .close {
+    background-color: transparent;
+    border-color: transparent;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.time {
+    text-align: right;
+    font-size: 14px;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    #note {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    #notes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
