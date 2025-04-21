@@ -11,22 +11,13 @@ body {
     font-weight: bold;
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 7820ea7887e0783d72e6ee54c434bc5849188c51
 #note {
     background-image: url('https://i.postimg.cc/xTKsY5fG/newpage.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 450px;
-<<<<<<< HEAD
     height: 220px;
-=======
-    height: 200px;
->>>>>>> 7820ea7887e0783d72e6ee54c434bc5849188c51
     border-radius: 5%;
     margin: auto;
     display: flex;
@@ -34,19 +25,11 @@ body {
     align-items: center;
 }
 
-<<<<<<< HEAD
 #myForm {
-=======
-#from {
->>>>>>> 7820ea7887e0783d72e6ee54c434bc5849188c51
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-<<<<<<< HEAD
-=======
-    width: 60%;
->>>>>>> 7820ea7887e0783d72e6ee54c434bc5849188c51
 }
 
 .input-group {
@@ -62,7 +45,6 @@ body {
 .button-group {
     display: flex;
     gap: 10px;
-<<<<<<< HEAD
 }
 
 #notes {
@@ -122,6 +104,4 @@ body {
     .card {
         width: 90%;
     }
-=======
->>>>>>> 7820ea7887e0783d72e6ee54c434bc5849188c51
 }
