@@ -16,7 +16,7 @@ function newNote() {
     notes.unshift(note)
     localStorage.setItem('notes', JSON.stringify(notes))
 
-    // document.querySelector('#myForm').reset()
+    document.querySelector('#myForm').reset()
     savedNotes()
 }
 
