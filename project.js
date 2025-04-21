@@ -31,7 +31,9 @@ function savedNotes() {
                 <div class="card-body">
                     <button class="close" onclick="deleteNote(${note.id})">❌</button>
                     <h2 class="card-title">${note.title}</h2>
-                    <h5 class="card-text">${note.task}</h5>
+                    <div class="scrollText">
+                    <h5 class="cardText">${note.task}</h5>
+                    </div>
                     <div class="time">
                         <p>תאריך: ${note.date}</p>
                         <p>שעה: ${note.time}</p>

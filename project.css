@@ -53,7 +53,7 @@ body {
     justify-content: flex-start;
     direction: rtl;
 }
-
+  
 .card {
     background-color: rgb(245, 245, 192);
     margin: 10px;
@@ -70,10 +70,17 @@ body {
     right: 5px;
 }
 
+.scrollText {
+    max-height: 100px;
+    overflow-y: auto;
+  }
+  
+
 .time {
     text-align: right;
     font-size: 14px;
     color: #555;
+ 
 }
 
 @keyframes fadeIn {
