@@ -1,4 +1,6 @@
-function newNote() {
+function newNote(event) {
+    event.preventDefault()
+
     const newTitle = document.querySelector('#addTitle').value
     const newDate = document.querySelector('#addDate').value
     const newTime = document.querySelector('#addTime').value
@@ -30,7 +32,7 @@ function savedNotes() {
             <div class="card" style="width: 18rem;" data-id="${note.id}">
                 <div class="card-body">
                     <button class="close" onclick="deleteNote(${note.id})">❌</button>
-                    <h2 class="card-title">${note.title}</h2>
+                    <h2 class="cardTitle">${note.title}</h2>
                     <div class="scrollText">
                     <h5 class="cardText">${note.task}</h5>
                     </div>
@@ -53,4 +55,4 @@ function deleteNote(id) {
     savedNotes()
 }
 
-savedNotes()
+document.addEventListener("DOMContentLoaded", savedNotes);

@@ -22,7 +22,7 @@
     <h1 id="title">My notes</h1>
 
     <div id="note">
-        <form id="myForm">
+        <form id="myForm" onsubmit="newNote(event)">
             <input id="addTitle" class="form-control" type="text" placeholder="Write your title">
 
             <div class="input-group">
@@ -30,10 +30,10 @@
                 <input id="addTime" class="form-control" type="time">
             </div>
 
-            <input id="addTask" class="form-control" type="text" placeholder="Write the task here">
+            <input id="addTask" class="form-control" type="text" placeholder="Write the task here" required>
 
             <div class="button-group">
-                <button type="button" onclick="newNote()" class="btn btn-primary">Save</button>
+                <button type="submit" class="btn btn-primary">Save</button>
                 <button type="reset" class="btn btn-secondary">Reset</button>
             </div>
         </form>

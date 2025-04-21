@@ -61,7 +61,10 @@ body {
     animation: fadeIn 0.3s ease-in;
 
 }
-
+.cardTitle {
+    text-decoration: underline;
+  }
+  
 .card .close {
     background-color: transparent;
     border-color: transparent;
