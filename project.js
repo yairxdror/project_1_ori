@@ -82,7 +82,8 @@ function newNote(event) {
         delete document.querySelector('#myForm').dataset.editingId;
 
         // החזר את טקסט הכפתור ל-"שמור"
-        document.querySelector('#myForm button[type="submit"]').textContent = "שמור";
+        const t = translations[currentLang];
+        document.querySelector('#myForm button[type="submit"]').textContent = t.save;
     } else {
         const note = {
             id: Date.now(),
@@ -162,8 +163,10 @@ function editNote(id) {
     document.querySelector('#myForm').dataset.editingId = id;
 
     // שנה את טקסט הכפתור ל-"עדכן פתק"
-    document.querySelector('#myForm button[type="submit"]').textContent = "עדכן פתק";
-    document.querySelector('#cancelEdit').style.display = "inline-block"; // הראה כפתור ביטול
+    const t = translations[currentLang];
+    document.querySelector('#myForm button[type="submit"]').textContent = t.updateNote;
+    document.querySelector('#cancelEdit').textContent = t.cancelEdit;
+    document.querySelector('#cancelEdit').style.display = "inline-block";
 
     // גלול לראש הדף בצורה חלקה
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -173,7 +176,9 @@ function editNote(id) {
 function cancelEdit() {
     delete document.querySelector('#myForm').dataset.editingId;
     document.querySelector('#myForm').reset();
-    document.querySelector('#myForm button[type="submit"]').textContent = "שמור";
+    
+    const t = translations[currentLang];
+    document.querySelector('#myForm button[type="submit"]').textContent = t.save;    
     document.querySelector('#cancelEdit').style.display = "none"; // הסתר את הכפתור
 }
 
