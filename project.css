@@ -160,6 +160,11 @@ body {
 }
 
 @media (max-width: 600px) {
+    #toggleLanguage {
+        right: 15px;
+
+    }
+
     #note {
         width: 90%;
         height: auto;
