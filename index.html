@@ -19,22 +19,25 @@
 </head>
 
 <body>
-    <h1 id="title">My notes</h1>
+    <button id="toggleLanguage" class="btn btn-light"></button>
+
+    <h1 class="title"></h1>
 
     <div id="note">
         <form id="myForm" onsubmit="newNote(event)">
-            <input id="addTitle" class="form-control" type="text" placeholder="Write your title">
+            <input id="addTitle" class="form-control" type="text">
 
             <div class="input-group">
                 <input id="addDate" class="form-control" type="date">
                 <input id="addTime" class="form-control" type="time">
             </div>
 
-            <input id="addTask" class="form-control" type="text" placeholder="Write the task here" required>
+            <input id="addTask" class="form-control" type="text" required>
 
             <div class="button-group">
-                <button type="submit" class="btn btn-primary">Save</button>
-                <button type="reset" class="btn btn-secondary">Reset</button>
+                <button type="button" class="btn btn-danger" id="cancelEdit" style="display: none;"></button>
+                <button type="submit" class="btn btn-primary"></button>
+                <button type="reset" class="btn btn-secondary"></button>
             </div>
         </form>
     </div>
@@ -42,9 +45,12 @@
 
     <div id="notes"></div>
     <br>
-    <h6>© All rights reserved to "My notes" by Yair Dror 2025.</h6>
+    <h3 class="expired-title" style="display: none;"></h3>
+    <div id="expired-notes"></div>
+    <br><br>
+    <p id="reserved">© All rights reserved to "My notes" by Yair Dror 2025.</p>
 
-    <script src="project.js"></script>
+    <script src="project.js" defer></script>
 </body>
 
 </html>

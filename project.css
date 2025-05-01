@@ -1,11 +1,25 @@
 body {
     background-image: url('https://corkhouse.co.il/wp-content/uploads/2023/05/10786-%D7%9C%D7%95%D7%97-%D7%A9%D7%A2%D7%9D-3-%D7%9E%D7%9E-%D7%93%D7%92%D7%9D-WHITE-scaled.jpg');
-
+    background-color: rgb(225, 225, 225);
     text-align: center;
 
 }
 
-#title {
+#toggleLanguage {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    background-color: rgb(245, 245, 192);
+    font-size: 13px;
+}
+
+.title {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.expired-title {
     font-family: 'Patrick Hand', cursive;
     font-size: 32px;
     font-weight: bold;
@@ -53,39 +67,84 @@ body {
     justify-content: flex-start;
     direction: rtl;
 }
-  
+
 .card {
     background-color: rgb(245, 245, 192);
     margin: 10px;
     height: 220px;
     margin-top: 20px;
     animation: fadeIn 0.3s ease-in;
-
+    width: 18rem;
 }
+
 .cardTitle {
     font-weight: bold;
     text-decoration: underline;
-  }
-  
+}
+
 .card .close {
     background-color: transparent;
     border-color: transparent;
     position: absolute;
     top: 5px;
     right: 5px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.card .edit {
+    background-color: transparent;
+    border-color: transparent;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.card .edit:hover,
+.card .close:hover,
+.card.expired:hover {
+    opacity: 1;
 }
 
 .scrollText {
     max-height: 100px;
     overflow-y: auto;
-  }
-  
+}
+
 
 .time {
     text-align: right;
     font-size: 14px;
     color: #555;
- 
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}
+
+.time p {
+    margin-bottom: 0;
+}
+
+#notes,
+#expired-notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    direction: rtl;
+}
+
+.card.expired {
+    background-color: #cccccc;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+#reserved {
+    bottom: 0;
+    width: 100%;
 }
 
 @keyframes fadeIn {
@@ -108,7 +167,8 @@ body {
         border-radius: 10px;
     }
 
-    #notes {
+    #notes,
+    #expired-notes {
         flex-direction: column;
         align-items: center;
     }
@@ -116,4 +176,10 @@ body {
     .card {
         width: 90%;
     }
+
+    .card .close,
+    .card .edit {
+        opacity: 1;
+    }
+
 }
